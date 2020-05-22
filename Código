@@ -1,21 +1,36 @@
-private int nId;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "softs")
+
+public class SoftSkill {
+
+
+
+
 private String nCreationDate;
-private String nName;
+
 private String nLearning;
 private int nLevel;
 
-Softskill public ( @nullable String name,String Learning , int level, String CreationDate ) 
-{
+ public SoftSkill (@Nullable String name, String learning, int level, String CreationDate) {
 
-nName = nome;
-nLearning = situação;
-nlevel = nivel;
-CreationDate = CreationDate;
+        nName = name;
+        nLearning = learning;
+        nLevel = level;
+        nCreationDate = CreationDate;
+    }
 
 @PrimaryKey ( autoGenerate = true ) 
-@notnull
+   @NonNull
 @ColumnInfo ( name ="SoftskillId" )
 private int nId;
+
+
+
 @nullable
 @ColumnInfo ( name = "nName" )
 private String nName;
@@ -32,25 +47,25 @@ public String getName () {
 return nName;
 }
 
-public void setName ( nome da String ) {
-nName = nome;
+ public void setName (String nome){
+nName = nome; public void setName (String nome){
 }
 
 public String getLearning () {
 return nLearning;
 }
 
-public void setLearning ( Situação da String ) {
-nLearning = situação;
-}
+public void setLearning (String learning){
+            nLearning = learning;
+        }
 
-public int getLevel () {
-retornar nlevel;
-}
+  public int getLevel () {
+            return nLevel;
+        }
 
-public vazio setLevel ( int level ) {
-nLevel = nivel;
-}
+public void setLevel ( int level ){
+            nLevel = level;
+        }
 
 public String getCreationDate () {
 return nCreationDate;
@@ -61,6 +76,9 @@ public void setCreationDate ( String CreationDate ) {
 nCreationDate = nCreationDate;
 }
 
-private int nLevel;
-private String nCreationDate;
+
+}
+
+//fim da classe
+
 }
